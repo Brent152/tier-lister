@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "name": "Soaps-postuse",
+  "tiers": [
+    {
+      "id": "s",
+      "label": "S",
+      "color": "#ef4444"
+    },
+    {
+      "id": "a",
+      "label": "A",
+      "color": "#f97316"
+    },
+    {
+      "id": "b",
+      "label": "B",
+      "color": "#eab308"
+    },
+    {
+      "id": "c",
+      "label": "C",
+      "color": "#22c55e"
+    },
+    {
+      "id": "d",
+      "label": "D",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "f",
+      "label": "F",
+      "color": "#8b5cf6"
+    }
+  ],
+  "items": [
+    {
+      "id": "ywvplx9p2l",
+      "label": "Dragon's Blood",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7207/58882/Dragon%5Fs%5FBlood%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F72557.1770327566.png?c=2",
+      "color": "#722f37",
+      "description": "A warm, masculine-leaning blend led by amber, vanilla, and patchouli. Touches of orange and other fruity base notes round out the aroma, giving it a rich, lingering character on skin.",
+      "tier": null
+    },
+    {
+      "id": "soap00002a",
+      "label": "Spearmint Rosemary",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/products/7279/images/58955/Spearmint_Rosemary_Cold_Process_Soap_Loaves___Bars__03589.1749375347.350.350.png?c=2",
+      "color": "#6ab37f",
+      "description": "Cool, sweet spearmint paired with herbal rosemary for a fresh, garden-style aroma. Flecks of peppermint leaf add gentle exfoliation throughout the bar.",
+      "tier": null
+    },
+    {
+      "id": "soap00003a",
+      "label": "Gobi Gold",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7215/58890/Gobi%5FGold%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F55813.1749572594.png?c=2",
+      "color": "#d4a017",
+      "description": "A complex blend leading with sweet orange and plumeria, layered over patchouli, amber, and vanilla. Roughly a dozen additional notes weave together for a citrus-bright top with warm, earthy depth, and the bar contains activated charcoal.",
+      "tier": null
+    },
+    {
+      "id": "soap00004a",
+      "label": "Mango Salsa",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/products/7242/images/58916/Mango_Salsa_Scrub_Cold_Process_Soap_Loaves___Bars__55591.1749146762.350.350.png?c=2",
+      "color": "#ff8c42",
+      "description": "Juicy mango mingled with bright orange and crisp apple, finished with subtle sweet floral accents. The bar is studded with sea salt and ground oatmeal for a fruity, gently exfoliating scrub.",
+      "tier": null
+    },
+    {
+      "id": "soap00005a",
+      "label": "Apple Spice",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/products/7175/images/58846/Apple_Spice_Cold_Process_Soap_Loaves___Bars__24969.1749629155.350.350.png?c=2",
+      "color": "#b8443d",
+      "description": "Sweet red apple sits front and center, supported by warm cinnamon, clove, and a touch of pumpkin. The result is a mellow, autumn-leaning scent that suggests baked apple desserts.",
+      "tier": null
+    },
+    {
+      "id": "soap00006a",
+      "label": "Lavender Mint",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7230/58905/Lavender%5FMint%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F38230.1749146205.png?c=2",
+      "color": "#a594c8",
+      "description": "Calming floral lavender brightened with cool, sweet peppermint. The combination leans aromatherapeutic, balancing relaxing herbal notes with an invigorating mint finish.",
+      "tier": null
+    },
+    {
+      "id": "soap00007a",
+      "label": "Cashmere",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7227/58901/Kashmir%5FScrub%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F12765.1749491938.png?c=2",
+      "color": "#e0d2b6",
+      "description": "A crisp woodsy floral with an almost perfume-like quality, sitting in unisex territory. Sea salt and ground oatmeal are blended in for added scrub texture. (Bulk Apothecary sells this as 'Kashmir Scrub' — closest match.)",
+      "tier": null
+    },
+    {
+      "id": "soap00008a",
+      "label": "Bamboo Mud",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7179/58851/Bamboo%5FMud%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F95802.1749287441.png?c=2",
+      "color": "#7a8050",
+      "description": "Delicate lily of the valley layered over green floral undertones for a fresh, clean, slightly earthy aroma. The bar is enriched with bentonite clay for a soft, detoxifying feel.",
+      "tier": null
+    },
+    {
+      "id": "soap00009a",
+      "label": "French Vanilla Biscotti",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7213/58888/French%5FVanilla%5FBiscotti%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F78763.1749287098.png?c=2",
+      "color": "#d4b078",
+      "description": "A rich, dessert-inspired scent built around warm French vanilla. Toasty almond and hazelnut notes give it a buttery, bakery-like character.",
+      "tier": null
+    },
+    {
+      "id": "soap00010a",
+      "label": "Charcoal Aloe",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7193/58868/Charcoal%5FAloe%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F48805.1775864433.png?c=2",
+      "color": "#1a1a1a",
+      "description": "A clean, brisk fragrance with a noticeable green aloe character that softens as the bar airs out. The unisex profile reads fresh and crisp, suitable for any season.",
+      "tier": null
+    },
+    {
+      "id": "soap00011a",
+      "label": "Spearmint Basil",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7278/58954/Spearmint%5FBasil%5FScrub%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F45086.1749642980.png?c=2",
+      "color": "#4a8c5e",
+      "description": "Cool spearmint paired with leafy basil and earthy sage for a green, herbaceous aroma. Sea salt and peppermint leaves are folded in to give the bar a gentle scrub.",
+      "tier": null
+    },
+    {
+      "id": "soap00012a",
+      "label": "White Tea Ginger",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7294/58972/White%5FTea%5FGinger%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F56880.1749148101.png?c=2",
+      "color": "#c4a575",
+      "description": "Smooth white tea is paired with mellow aloe, a hint of tea tree, and a soft warmth from ginger. The result is a gentle, brightly pleasant blend that does not overpower.",
+      "tier": null
+    },
+    {
+      "id": "soap00013a",
+      "label": "English Garden",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7209/58884/English%5FGarden%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F65556.1775766850.png?c=2",
+      "color": "#4a9d6f",
+      "description": "A lush, traditional floral bouquet built on lily, lilac, rose, and hyacinth. Around a dozen additional florals layer in for a long-lasting, garden-in-bloom scent.",
+      "tier": null
+    },
+    {
+      "id": "soap00014a",
+      "label": "Pumpkin Spice",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/products/7265/images/58941/Pumpkin_Spice_Cold_Process_Soap_Loaves___Bars__22424.1749413224.350.350.png?c=2",
+      "color": "#c2691f",
+      "description": "The classic autumn fragrance of sweet pumpkin paired with warm baking spices. The result is cozy and dessert-like, but versatile enough to use year-round.",
+      "tier": null
+    },
+    {
+      "id": "soap00015a",
+      "label": "Pine Tar",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7260/58936/Pine%5FTar%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F04468.1749421746.png?c=2",
+      "color": "#1f2d1f",
+      "description": "A rugged, old-fashioned soap scent built around woody pine and a touch of bright orange. The bar incorporates silica sand, activated charcoal, and ground oatmeal for a heavy-duty scrub.",
+      "tier": null
+    },
+    {
+      "id": "soap00016a",
+      "label": "Black Forest",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7185/58857/Black%5FForest%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F66455.1750235942.png?c=2",
+      "color": "#2a1f2a",
+      "description": "A dark, sophisticated blend with deep musky undertones and soft floral notes, anchored by warm sandalwood and patchouli. Activated charcoal in the bar adds an earthy depth and gives it the moody dark color.",
+      "tier": null
+    },
+    {
+      "id": "soap00017a",
+      "label": "Orange Cinnamon",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7252/58928/Orange_Cinnamon_Cold_Process_Soap_Loaves___Bars__22135.1749147053.png?c=2",
+      "color": "#c8611a",
+      "description": "Sweet orange leads with a vibrant citrus brightness, softened and warmed by fresh cinnamon. The combination is lively and spiced without tipping into heavy territory.",
+      "tier": null
+    },
+    {
+      "id": "soap00001a",
+      "label": "Tobacco Flowers",
+      "image": "https://cdn11.bigcommerce.com/s-99si0d/images/stencil/400x400/products/7287/58965/Tobacco%5FFlowers%5FScrub%5FCold%5FProcess%5FSoap%5FLoaves%5F%5F%5FBars%5F%5F87135.1749292881.png?c=2",
+      "color": "#6b5b95",
+      "description": "An earthy, sweet floral with a slightly musky undertone and warm hints of amber. The unisex scent is anchored by sea salt exfoliants in the bar for added texture.",
+      "tier": "s"
+    }
+  ]
+}

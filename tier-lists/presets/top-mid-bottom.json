@@ -1,0 +1,21 @@
+{
+  "id": "top-mid-bottom",
+  "name": "Top / Mid / Bottom",
+  "tiers": [
+    {
+      "id": "top",
+      "label": "Top",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "mid",
+      "label": "Mid",
+      "color": "#64748b"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom",
+      "color": "#475569"
+    }
+  ]
+}

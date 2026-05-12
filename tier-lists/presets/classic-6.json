@@ -1,0 +1,36 @@
+{
+  "id": "classic-6",
+  "name": "Classic (S–F)",
+  "tiers": [
+    {
+      "id": "s",
+      "label": "S",
+      "color": "#ef4444"
+    },
+    {
+      "id": "a",
+      "label": "A",
+      "color": "#f97316"
+    },
+    {
+      "id": "b",
+      "label": "B",
+      "color": "#eab308"
+    },
+    {
+      "id": "c",
+      "label": "C",
+      "color": "#22c55e"
+    },
+    {
+      "id": "d",
+      "label": "D",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "f",
+      "label": "F",
+      "color": "#8b5cf6"
+    }
+  ]
+}

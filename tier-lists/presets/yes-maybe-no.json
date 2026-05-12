@@ -1,0 +1,21 @@
+{
+  "id": "yes-maybe-no",
+  "name": "Yes / Maybe / No",
+  "tiers": [
+    {
+      "id": "yes",
+      "label": "Yes",
+      "color": "#22c55e"
+    },
+    {
+      "id": "maybe",
+      "label": "Maybe",
+      "color": "#eab308"
+    },
+    {
+      "id": "no",
+      "label": "No",
+      "color": "#ef4444"
+    }
+  ]
+}
