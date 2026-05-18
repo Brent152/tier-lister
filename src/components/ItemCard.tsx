@@ -3,6 +3,8 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { Item } from "../types";
 import { textOn } from "../color";
+import { useStore } from "../store";
+import { itemMatches, normalizeQuery } from "../search";
 import { ModalShell } from "./NewListDialog";
 
 type Props = {
@@ -13,6 +15,9 @@ type Props = {
 
 export function ItemCard({ item, onEdit, onDelete }: Props) {
   const [showInfo, setShowInfo] = useState(false);
+  const search = useStore((s) => s.search);
+  const nq = normalizeQuery(search);
+  const highlighted = nq.length > 0 && itemMatches(item, nq);
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: item.id,
   });
@@ -40,6 +45,10 @@ export function ItemCard({ item, onEdit, onDelete }: Props) {
       <div
         className={`w-20 h-20 border border-slate-700 rounded overflow-hidden flex items-center justify-center text-center ${
           bgColor ? "" : "bg-slate-800"
+        } ${
+          highlighted
+            ? "ring-2 ring-amber-400 shadow-[0_0_10px_2px_rgba(251,191,36,0.55)]"
+            : ""
         }`}
         style={swatchStyle}
       >

@@ -13,10 +13,11 @@ import {
   type DragStartEvent,
 } from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useStore } from "../store";
 import type { Item, TierList } from "../types";
 import { UNRANKED_ID } from "../types";
+import { itemMatches, normalizeQuery } from "../search";
 import { ItemEditor } from "./ItemEditor";
 import { TierRow } from "./TierRow";
 import { UnrankedPool } from "./UnrankedPool";
@@ -33,6 +34,48 @@ export function TierBoard({ list }: { list: TierList }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [editingName, setEditingName] = useState(false);
   const [draftName, setDraftName] = useState(list.name);
+
+  const search = useStore((s) => s.search);
+  const setSearch = useStore((s) => s.setSearch);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const [searchDraft, setSearchDraft] = useState(search);
+  // Debounce committing the query to the store so 600+ cards don't re-render
+  // on every keystroke.
+  useEffect(() => {
+    const t = setTimeout(() => setSearch(searchDraft), 120);
+    return () => clearTimeout(t);
+  }, [searchDraft, setSearch]);
+  // Reflect external resets (e.g. switching lists clears search) in the input.
+  useEffect(() => {
+    setSearchDraft(search);
+  }, [search]);
+
+  // Ctrl/Cmd+F focuses our search field instead of the browser's find bar.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "f") {
+        e.preventDefault();
+        const el = searchInputRef.current;
+        if (el) {
+          el.focus();
+          el.select();
+        }
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const nq = normalizeQuery(search);
+  const matchCount = useMemo(
+    () => (nq ? list.items.filter((i) => itemMatches(i, nq)).length : 0),
+    [nq, list.items],
+  );
+
+  const clearSearch = () => {
+    setSearchDraft("");
+    setSearch("");
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 3 } }),
@@ -155,6 +198,36 @@ export function TierBoard({ list }: { list: TierList }) {
             {list.name}
           </h2>
         )}
+        <div className="flex items-center gap-2 flex-1 max-w-md mx-4">
+          <div className="relative flex-1">
+            <input
+              ref={searchInputRef}
+              value={searchDraft}
+              onChange={(e) => setSearchDraft(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") clearSearch();
+              }}
+              placeholder="Search items by name or description…"
+              className="w-full text-sm bg-slate-800 border border-slate-700 rounded px-3 py-1.5 pr-7 placeholder:text-slate-500"
+            />
+            {searchDraft && (
+              <button
+                type="button"
+                onClick={clearSearch}
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-sm leading-none"
+                title="Clear (Esc)"
+              >
+                ×
+              </button>
+            )}
+          </div>
+          {nq && (
+            <span className="text-xs text-slate-400 whitespace-nowrap">
+              {matchCount} / {list.items.length}
+            </span>
+          )}
+        </div>
+
         <div className="flex items-center gap-2">
           <button
             type="button"

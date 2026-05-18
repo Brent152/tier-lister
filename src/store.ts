@@ -11,6 +11,9 @@ type State = {
   currentList: TierList | null;
   currentListName: string | null;
   toasts: Toast[];
+  /** Transient UI search query. Deliberately NOT part of currentList, so it
+   * never serializes/autosaves to the list JSON. */
+  search: string;
 };
 
 type Actions = {
@@ -35,6 +38,8 @@ type Actions = {
 
   pushToast: (message: string) => void;
   dismissToast: (id: string) => void;
+
+  setSearch: (query: string) => void;
 };
 
 export const useStore = create<State & Actions>((set, get) => ({
@@ -43,6 +48,7 @@ export const useStore = create<State & Actions>((set, get) => ({
   currentList: null,
   currentListName: null,
   toasts: [],
+  search: "",
 
   refreshLists: async () => {
     try {
@@ -63,13 +69,13 @@ export const useStore = create<State & Actions>((set, get) => ({
   loadList: async (name) => {
     try {
       const list = await api.getList(name);
-      set({ currentList: list, currentListName: name });
+      set({ currentList: list, currentListName: name, search: "" });
     } catch (e) {
       get().pushToast(`Failed to load "${name}": ${(e as Error).message}`);
     }
   },
 
-  closeList: () => set({ currentList: null, currentListName: null }),
+  closeList: () => set({ currentList: null, currentListName: null, search: "" }),
 
   createList: async (name, presetId) => {
     try {
@@ -218,4 +224,6 @@ export const useStore = create<State & Actions>((set, get) => ({
     set((s) => ({ toasts: [...s.toasts, { id: newId(), message }] })),
   dismissToast: (id) =>
     set((s) => ({ toasts: s.toasts.filter((t) => t.id !== id) })),
+
+  setSearch: (query) => set({ search: query }),
 }));

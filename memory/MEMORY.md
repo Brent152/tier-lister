@@ -1,0 +1,2 @@
+- [Soap preferences](soap_preferences.md) — User dislikes exfoliating/scrub soaps; filter these out of any soap recommendations.
+- [Catalog-to-tier-list skill](catalog-scrape-skill.md) — Reusable pipeline for scraping a web catalog into a tier-lister JSON exists as a personal skill.

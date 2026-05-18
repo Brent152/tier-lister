@@ -2,6 +2,8 @@ import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, horizontalListSortingStrategy } from "@dnd-kit/sortable";
 import type { Item } from "../types";
 import { UNRANKED_ID } from "../types";
+import { useStore } from "../store";
+import { itemMatches, normalizeQuery } from "../search";
 import { ItemCard } from "./ItemCard";
 
 type Props = {
@@ -13,11 +15,16 @@ type Props = {
 
 export function UnrankedPool({ items, onAddItem, onEditItem, onDeleteItem }: Props) {
   const { setNodeRef, isOver } = useDroppable({ id: UNRANKED_ID });
-  const ids = items.map((i) => i.id);
+  const search = useStore((s) => s.search);
+  const nq = normalizeQuery(search);
+  const visible = nq ? items.filter((i) => itemMatches(i, nq)) : items;
+  const ids = visible.map((i) => i.id);
   return (
     <div className="border-t border-slate-700 mt-2 bg-slate-950/50">
       <div className="flex items-center justify-between px-3 py-2 border-b border-slate-800">
-        <span className="text-xs uppercase tracking-wider text-slate-400">Unranked ({items.length})</span>
+        <span className="text-xs uppercase tracking-wider text-slate-400">
+          Unranked ({nq ? `${visible.length} of ${items.length}` : items.length})
+        </span>
         <button
           type="button"
           onClick={onAddItem}
@@ -31,10 +38,14 @@ export function UnrankedPool({ items, onAddItem, onEditItem, onDeleteItem }: Pro
         className={`p-3 flex flex-wrap gap-2 items-start min-h-[6rem] ${isOver ? "bg-slate-800/40" : ""}`}
       >
         <SortableContext items={ids} strategy={horizontalListSortingStrategy}>
-          {items.length === 0 && (
-            <div className="text-sm text-slate-500 italic">Drop items here, or click "Add item" to start.</div>
+          {visible.length === 0 && (
+            <div className="text-sm text-slate-500 italic">
+              {nq
+                ? "No unranked items match your search."
+                : 'Drop items here, or click "Add item" to start.'}
+            </div>
           )}
-          {items.map((it) => (
+          {visible.map((it) => (
             <ItemCard
               key={it.id}
               item={it}
